@@ -1,0 +1,12 @@
+#!/bin/bash
+
+flash="/sys/class/leds/torch-ktd267/brightness"
+
+if (( $(cat $flash) == 0 ));then
+echo 100 > $flash
+else
+echo 0 > $flash
+fi
+
+
+

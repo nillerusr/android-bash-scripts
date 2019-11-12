@@ -1,0 +1,3 @@
+#!/bin/bash
+if [ -z $1 ];then echo 'usage: brightness <level>';exit;fi
+echo $1 > /sys/class/backlight/sprd_backlight/brightness

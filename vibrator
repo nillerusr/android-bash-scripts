@@ -1,0 +1,16 @@
+#!/bin/bash
+
+vibr()
+{
+echo $1 > /sys/devices/virtual/timed_output/vibrator/enable
+}
+
+while [ 1 ];do
+
+vibr 100
+sleep 0.2
+vibr 50
+sleep 0.1
+vibr 130
+sleep 0.1
+done

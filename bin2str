@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z $1 ]
+then
+echo 'usage: bin2str <text>'
+else
+echo $* | perl -lape '$_=pack"(B8)*",@F'
+fi

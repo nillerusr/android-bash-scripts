@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo '0' >/sys/class/android_usb/android0/enable
+echo 'adb,rndis' >/sys/class/android_usb/android0/functions
+echo '1' >/sys/class/android_usb/android0/enable
+ip addr add 192.168.42.129/24 dev rndis0
+ip link set dev rndis0 up
+ip route add table local 192.168.42.0/24 dev rndis0

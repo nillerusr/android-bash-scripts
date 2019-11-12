@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z $1 ]
+then
+echo 'usage: str2bin <text>'
+else
+echo $* | perl -lpe '$_=join " ", unpack"(B8)*"'
+fi
